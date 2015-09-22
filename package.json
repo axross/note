@@ -39,11 +39,14 @@
     "watchify": "^3.4.0"
   },
   "dependencies": {
+    "bemmer": "^0.3.2",
+    "firebase": "^2.2.9",
     "history": "^1.9.1",
     "react": "^0.13.3",
     "react-redux": "^2.1.2",
     "react-router": "^1.0.0-rc1",
-    "redux": "^3.0.0"
+    "redux": "^3.0.0",
+    "sanitize.css": "^2.0.0"
   },
   "browserify-shim": {}
 }
