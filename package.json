@@ -1,0 +1,49 @@
+{
+  "name": "note",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp server",
+    "bundle": "gulp bundle",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axross/note.git"
+  },
+  "author": "axross <kou@axross.org> (http://axross.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axross/note/issues"
+  },
+  "homepage": "https://github.com/axross/note#readme",
+  "devDependencies": {
+    "babel-core": "^5.8.25",
+    "babelify": "^6.3.0",
+    "browser-sync": "^2.9.3",
+    "browserify": "^9.0.8",
+    "browserify-shim": "^3.8.10",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-csso": "^1.0.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-stylus": "^2.0.7",
+    "gulp-watchify": "^0.5.0",
+    "uglifyify": "^3.0.1",
+    "vinyl-buffer": "^1.0.0",
+    "watchify": "^3.4.0"
+  },
+  "dependencies": {
+    "history": "^1.9.1",
+    "react": "^0.13.3",
+    "react-redux": "^2.1.2",
+    "react-router": "^1.0.0-rc1",
+    "redux": "^3.0.0"
+  },
+  "browserify-shim": {}
+}
