@@ -1,18 +1,21 @@
 import React from 'react';
 
+import {
+  GlobalHeader,
+  GlobalMain,
+} from './components';
+
 const Root = React.createClass({
   render() {
     console.log(this.props);
 
     return (
       <div>
-        <div>
-          bbb
-        </div>
+        <GlobalHeader />
 
-        <div>
+        <GlobalMain>
           {this.props.children}
-        </div>
+        </GlobalMain>
       </div>
     );
   },
