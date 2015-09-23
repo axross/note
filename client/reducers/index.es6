@@ -1,1 +1,1 @@
-export { example } from './exampleReducer';
+export { auth } from './authReducer';
