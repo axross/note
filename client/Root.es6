@@ -5,6 +5,7 @@ import { authAction } from './actions';
 import {
   GlobalHeader,
   GlobalMain,
+  PreloaderCurtain,
 } from './components';
 
 const Root = React.createClass({
@@ -29,6 +30,8 @@ const Root = React.createClass({
         <GlobalMain>
           {this.props.children}
         </GlobalMain>
+
+        <PreloaderCurtain />
       </div>
     );
   },
