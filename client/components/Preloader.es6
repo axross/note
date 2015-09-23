@@ -1,6 +1,7 @@
+import Bemmer from 'bemmer';
 import React from 'react';
 
-const Preloader = React.createClass({
+export const Preloader = React.createClass({
   render() {
     const b = Bemmer.create('preloader', this.props.className);
 
