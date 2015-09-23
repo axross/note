@@ -13,26 +13,37 @@ export const GlobalHeader = React.createClass({
   render() {
     const b = Bemmer.create('globalHeader', this.props.className);
 
-    console.log(this.props.isAuthed);
-
     return (
       <div className={b()}>
         <div className={b('__rightMenu')}>
-          <a
-            className={b('__rightMenu__item')}
-            onClick={this.props.onSigninClick}
-          >
-            Login
-          </a>
-          <a
-            className={b('__rightMenu__item')}
-            onClick={this.props.onSignoutClick}
-          >
-            Logout
-          </a>
+          {this.renderAuthButton()}
         </div>
       </div>
     );
+  },
+
+  renderAuthButton() {
+    const b = Bemmer.create('globalHeader', this.props.className);
+
+    if (this.props.isAuthed) {
+      return (
+        <a
+          className={b('__rightMenu__item')}
+          onClick={this.props.onSignoutClick}
+        >
+          Logout
+        </a>
+      );
+    } else {
+      return (
+        <a
+          className={b('__rightMenu__item')}
+          onClick={this.props.onSigninClick}
+        >
+          Login
+        </a>
+      );
+    }
   },
 });
 
