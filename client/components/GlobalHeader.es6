@@ -2,25 +2,17 @@ import Bemmer from 'bemmer';
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { authResource } from '../resources';
+import { authAction } from '../actions';
 
 export const GlobalHeader = React.createClass({
   onClick() {
-    authResource.signin({
-      email: 'kou@axross.org',
-      password: 'asdf1234',
-    })
-      .then(auth => {
-        console.log(auth);
-      })
-      .catch(err => {
-        console.dir(err);
-        console.error(err);
-      });
+    this.props.dispatch(authAction.signin());
   },
 
   render() {
     const b = Bemmer.create('globalHeader');
+
+    console.log(this.props.isAuthed);
 
     return (
       <div className={b()}>
@@ -41,5 +33,7 @@ export const GlobalHeader = React.createClass({
 });
 
 export default connect(state => {
-  return {};
+  return {
+    isAuthed: state.auth.isAuthed,
+  };
 })(GlobalHeader);
