@@ -5,12 +5,13 @@ import { connect } from 'react-redux';
 import { authAction } from '../actions';
 
 export const GlobalHeader = React.createClass({
-  onClick() {
-    this.props.dispatch(authAction.signin());
+  propTypes: {
+    onSigninClick: React.PropTypes.func.isRequired,
+    onSignoutClick: React.PropTypes.func.isRequired,
   },
 
   render() {
-    const b = Bemmer.create('globalHeader');
+    const b = Bemmer.create('globalHeader', this.props.className);
 
     console.log(this.props.isAuthed);
 
@@ -19,11 +20,14 @@ export const GlobalHeader = React.createClass({
         <div className={b('__rightMenu')}>
           <a
             className={b('__rightMenu__item')}
-            onClick={this.onClick}
+            onClick={this.props.onSigninClick}
           >
             Login
           </a>
-          <a className={b('__rightMenu__item')}>
+          <a
+            className={b('__rightMenu__item')}
+            onClick={this.props.onSignoutClick}
+          >
             Logout
           </a>
         </div>

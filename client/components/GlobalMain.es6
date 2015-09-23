@@ -3,7 +3,7 @@ import React from 'react';
 
 export const GlobalMain = React.createClass({
   render() {
-    const b = Bemmer.create('globalMain');
+    const b = Bemmer.create('globalMain', this.props.className);
 
     return (
       <div>
