@@ -1,4 +1,5 @@
 import firebase from '../firebase';
+import { User } from '../models';
 
 export const AUTH_CHECK = 'AUTH_CHECK';
 export const AUTH_SIGNIN = 'AUTH_SIGNIN';
@@ -22,7 +23,11 @@ const signin = () => {
       firebase.authWithOAuthPopup('google', (err, authData) => {
         if (err) return reject(err);
 
-        return resolve(authData);
+        return resolve(new User({
+          id: authData.uid,
+          name: authData.google.displayName,
+          imageUrl: authData.google.cachedUserProfile.picture,
+        }));
       });
     }),
   };
