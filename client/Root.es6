@@ -21,7 +21,7 @@ const Root = React.createClass({
     console.log(this.props);
 
     return (
-      <div>
+      <div id="root">
         <GlobalHeader
           onSigninClick={this.onSigninClick}
           onSignoutClick={this.onSignoutClick}

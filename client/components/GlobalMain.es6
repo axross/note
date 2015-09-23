@@ -6,7 +6,7 @@ export const GlobalMain = React.createClass({
     const b = Bemmer.create('globalMain', this.props.className);
 
     return (
-      <div>
+      <div className={b()}>
         {this.props.children}
       </div>
     );
