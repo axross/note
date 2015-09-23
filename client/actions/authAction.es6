@@ -30,6 +30,7 @@ const signin = () => {
         }));
       });
     }),
+    isPreloaderCurtainShown: true,
   };
 };
 

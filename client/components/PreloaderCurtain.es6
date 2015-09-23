@@ -9,7 +9,7 @@ export const PreloaderCurtain = React.createClass({
     const b = Bemmer.create('preloaderCurtain');
 
     return (
-      <div className={b()}>
+      <div className={b(null, { isShown: this.props.isShown })}>
         <Preloader
           className={b('__preloader')}
         />
@@ -20,6 +20,6 @@ export const PreloaderCurtain = React.createClass({
 
 export default connect(state => {
   return {
-
+    isShown: state.preloaderCurtain.count >= 1,
   };
 })(PreloaderCurtain);
