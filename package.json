@@ -40,6 +40,8 @@
   },
   "dependencies": {
     "bemmer": "^0.3.2",
+    "brace": "^0.5.1",
+    "codemirror": "^5.7.0",
     "firebase": "^2.2.9",
     "history": "^1.9.1",
     "react": "^0.13.3",
